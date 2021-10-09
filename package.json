@@ -1,0 +1,26 @@
+{
+  "name": "multitransfer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koteld/MultiTransfer.git"
+  },
+  "keywords": [
+    "ERC20"
+  ],
+  "author": "koteld",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koteld/MultiTransfer/issues"
+  },
+  "homepage": "https://github.com/koteld/MultiTransfer#readme",
+  "dependencies": {
+    "web3": "^1.6.0"
+  }
+}
