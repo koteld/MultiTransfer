@@ -2,10 +2,10 @@ const Web3 = require('web3');
 const { abi } = require('./ERC20.json');
 const { addresses } = require('./addresses.json');
 
-const INFURA_PROJECTID = '';
-const NETWORK = '';
-const CHAIN_ID = '';
-const TOKEN_ADDRESS = '';
+const INFURA_PROJECTID = 'f8c0238e936a41a4aec431ce4921c6a1';
+const NETWORK = 'palm-mainnet';
+const CHAIN_ID = '11297108109';
+const TOKEN_ADDRESS = '0x5eE074D24f462E0311814C992c99a178458C39fc';
 const PRIVATE_KEY = '';
 
 const amount = 0;
@@ -17,7 +17,7 @@ const main = async () => {
   
   const ERC20 = new web3.eth.Contract(abi, TOKEN_ADDRESS);
   for (const address of addresses) {
-    const transaction = ERC20.methods.transfer(`${address}`, `${web3.utils.toBN(amount)}`);
+    const transaction = ERC20.methods.transfer(`${address.split(',')[0]}`, `${web3.utils.toBN(Math.pow(parseInt(address.split(',')[1]), 18))}`);
     const options = {
       to      : transaction._parent._address,
       data    : transaction.encodeABI(),
